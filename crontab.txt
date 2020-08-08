@@ -5,11 +5,11 @@
 MAILTO=""
 
 # Turn HDMI Off (23:00/11:00pm)
-0 23 * * * sudo /home/pi/rpi-hdmi.sh off
+0 23 * * * sudo /home/pi/pingtester/rpi-hdmi.sh off
 
 # Turn HDMI On (7:00/7:00am)
-0 7 * * * sudo /home/pi/rpi-hdmi.sh on
+0 7 * * * sudo /home/pi/pingtester/rpi-hdmi.sh on
 
-# Log pings every minuôe
-* * * * * /home/pi/pingtest.sh
+# Log pings every minute
+* * * * * /home/pi/pingtester/pingtest.sh
 
