@@ -7,7 +7,7 @@ WIFICOUNT=""
 if [ $RECEIVED -eq 0 ]
 then 
   WIFICOL=red
-  WIFICOUNT=`/usr/bin/tail /home/pi/pingtester/pinglogs/wlan0modei.log | /bin/grep -n -m 1 -v ",.,0" | /usr/bin/cut -d : -f 1` mins
+  WIFICOUNT=`/usr/bin/tail /home/pi/pingtester/pinglogs/wlan0modem.log | /bin/grep -n -m 1 -v ",.,0" | /usr/bin/cut -d : -f 1` mins
 elif [ $RECEIVED ­lt $SENT ]
 then WIFICOL=orange
 else WIFICOL=green
@@ -34,7 +34,7 @@ if [ $RECEIVED -eq 0 ]
 then 
   NBNCOL=red
   NBNCOUNT=`/usr/bin/tail /home/pi/pingtester/pinglogs/eth0asp.log | /bin/grep -n -m 1 -v ",.,0" | /usr/bin/cut -d : -f 1` mins
-elif [ RECEIVED -lt $SENT ]
+elif [ $RECEIVED -lt $SENT ]
 then NBNCOL=orange
 else NBNCOL=green
 fi
@@ -43,7 +43,7 @@ fi
 #wifistatus {
   background: $WIFICOL;
 }
-#wifistatus p::after {
+#wifistatus p::after {
   content: "$WIFICOUNT";
 }
 #modemstatus {
