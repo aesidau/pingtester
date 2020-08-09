@@ -1,5 +1,5 @@
 # Install via:
-#   crontab -u pi/crontab.txt
+#   crontab -u pi crontab.txt
 
 # Don't email output of these jobs
 MAILTO=""
