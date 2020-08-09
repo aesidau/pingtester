@@ -1,0 +1,16 @@
+body, html {
+  height: 100%;
+}
+
+div {
+  color: white;
+  font-size: xx-large;
+  display: table;
+}
+
+p {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
