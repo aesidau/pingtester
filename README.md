@@ -22,6 +22,7 @@ Overview of the steps to install it:
 1. Once you've done this, then do `sudo shutdown now` so you can remove the keyboard, HDMI cable and TV, and do the rest of the steps remotely via ssh. Attach the LCD touch screen at this point also, then start up the Pi again.
 1. Get the necessary packages with `sudo apt-get update && sudo apt-get install xinit raspberry-ui-mods chromium-browser git --yes`
 1. Pull down this dashboard application with `cd && git clone https://github.com/aesidau/pingtester.git`
+1. `cd pingtester` and edit the `pingtest.sh` file to have the right IP addresses, e.g. use `route -n` to find the gateway IP address for the eth0 and wlan0 interfaces and `traceroute google.com` to find the IP address of the first hop beyond the gateway.
 1. Run `sudo rapi-config` to set boot option to autologin with desktop.
-1. `cd pingtester` and run `./setup-kiosk.sh && crontab -u pi crontab.txt && ./setup-lcd.sh` after which it should reboot and all be running
+1. Run `./setup-kiosk.sh && crontab -u pi crontab.txt && ./setup-lcd.sh` after which it should reboot and all be running
 
