@@ -6,5 +6,5 @@ mkdir -p /home/pi/.config/lxsession/LXDE-pi/
 @xset s off
 @xset -dpms
 @xset s noblank
-@chromium-browser --noerrdialogs --incognito --kiosk file:///home/pi/pingtester/pingstatus/index.html
+@chromium-browser --noerrdialogs --incognito --kiosk --check-for-update-interval=31536000 file:///home/pi/pingtester/pingstatus/index.html
 EOF
